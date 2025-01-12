@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Rwanda - Camping Experience</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F5F5F5;
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        /* Navigation styles (same as other pages) */
+        nav {
+            background-color: #2C5B2D;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 0 auto;
+            list-style: none;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #FFD700;
+            color: #333333;
+            transform: translateY(-2px);
+        }
+
+        nav a.active {
+            background-color: #FFD700;
+            color: #333333;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 50vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/api/placeholder/1920/1080');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-bottom: 2rem;
+        }
+
+        .hero-content {
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Content Section */
+        .content-container {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .section-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .section-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .section-header {
+            background-color: #2C5B2D;
+            color: white;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .section-header h2 {
+            font-size: 1.8rem;
+        }
+
+        .section-content {
+            padding: 2rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .info-card {
+            background-color: #F5F5F5;
+            padding: 1.5rem;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .info-card h3 {
+            color: #2C5B2D;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #FFD700;
+            padding-bottom: 0.5rem;
+        }
+
+        .culture-list, .wildlife-list, .transport-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .culture-list li, .wildlife-list li, .transport-list li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .culture-list li::before {
+            content: "•";
+            color: #FFA500;
+            position: absolute;
+            left: 0;
+        }
+
+        .climate-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .climate-table th, .climate-table td {
+            padding: 0.8rem;
+            text-align: left;
+            border-bottom: 1px solid #E8E8E8;
+        }
+
+        .climate-table th {
+            background-color: #87CEEB;
+            color: white;
+        }
+
+        .climate-table tr:hover {
+            background-color: #F5F5F5;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav li {
+                margin: 0.5rem 0;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.5rem;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="packages.html">Packages & Experiences</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>About Rwanda</h1>
+            <p>Discover the heart of Africa - The Land of a Thousand Hills</p>
+        </div>
+    </section>
+
+    <div class="content-container">
+        <!-- Culture Section -->
+        <div class="section-card">
+            <div class="section-header">
+                <h2>Cultural Heritage</h2>
+            </div>
+            <div class="section-content">
+                <p>Rwanda's rich cultural heritage is deeply rooted in its traditions, arts, and community values.</p>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>Traditional Customs</h3>
+                        <ul class="culture-list">
+                            <li>Intore Dance - traditional Rwandan dance</li>
+                            <li>Ubwoko - clan system and heritage</li>
+                            <li>Agaciro - dignity and self-respect</li>
+                            <li>Umuganda - community service tradition</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <h3>Arts & Crafts</h3>
+                        <ul class="culture-list">
+                            <li>Imigongo - geometric art designs</li>
+                            <li>Traditional basketry (Agaseke)</li>
+                            <li>Pottery and ceramics</li>
+                            <li>Contemporary art galleries in Kigali</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <h3>Language & Communication</h3>
+                        <ul class="culture-list">
+                            <li>Kinyarwanda - national language</li>
+                            <li>English and French widely used</li>
+                            <li>Traditional storytelling</li>
+                            <li>Respectful greeting customs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wildlife Section -->
+        <div class="section-card">
+            <div class="section-header">
+                <h2>Wildlife & Nature</h2>
+            </div>
+            <div class="section-content">
+                <p>Rwanda is home to diverse wildlife species and unique ecosystems.</p>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>Primates</h3>
+                        <ul class="wildlife-list">
+                            <li>Mountain Gorillas</li>
+                            <li>Golden Monkeys</li>
+                            <li>Chimpanzees</li>
+                            <li>Colobus Monkeys</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <h3>Big Game</h3>
+                        <ul class="wildlife-list">
+                            <li>African Elephants</li>
+                            <li>Lions</li>
+                            <li>Leopards</li>
+                            <li>Cape Buffalo</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <h3>Birds</h3>
+                        <ul class="wildlife-list">
+                            <li>Grey Crowned Cranes</li>
+                            <li>Great Blue Turacos</li>
+                            <li>Ross's Turacos</li>
+                            <li>Various raptor species</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Transportation Section -->
+        <div class="section-card">
+            <div class="section-header">
+                <h2>Getting Around</h2>
+            </div>
+            <div class="section-content">
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>Public Transport</h3>
+                        <ul class="transport-list">
+                            <li>Public buses between cities</li>
+                            <li>Shared taxis (matatus)</li>
+                            <li>Motorcycle taxis (motos)</li>
+                            <li>City buses in Kigali</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <h3>Private Transport</h3>
+                        <ul class="transport-list">
+                            <li>Car rental services</li>
+                            <li>Private drivers</li>
+                            <li>Organized tours</li>
+                            <li>Airport transfers</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Climate Section -->
+        <div class="section-card">
+            <div class="section-header">
+                <h2>Climate Information</h2>
+            </div>
+            <div class="section-content">
+                <p>Rwanda enjoys a temperate tropical highland climate with year-round mild temperatures.</p>
+                <table class="climate-table">
+                    <tr>
+                        <th>Season</th>
+                        <th>Months</th>
+                        <th>Temperature</th>
+                        <th>Rainfall</th>
+                    </tr>
+                    <tr>
+                        <td>Long Dry Season</td>
+                        <td>June - September</td>
+                        <td>25°C - 27°C</td>
+                        <td>Low</td>
+                    </tr>
+                    <tr>
+                        <td>Short Dry Season</td>
+                        <td>December - February</td>
+                        <td>23°C - 25°C</td>
+                        <td>Moderate</td>
+                    </tr>
+                    <tr>
+                        <td>Long Rainy Season</td>
+                        <td>March - May</td>
+                        <td>20°C - 22°C</td>
+                        <td>High</td>
+                    </tr>
+                    <tr>
+                        <td>Short Rainy Season</td>
+                        <td>October - November</td>
+                        <td>22°C - 24°C</td>
+                        <td>Moderate</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

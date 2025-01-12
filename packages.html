@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packages & Experiences - Rwanda Camping Experience</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F5F5F5;
+            color: #333333;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #2C5B2D;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 0 auto;
+            list-style: none;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #FFD700;
+            color: #333333;
+            transform: translateY(-2px);
+        }
+
+        nav a.active {
+            background-color: #FFD700;
+            color: #333333;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 50vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/api/placeholder/1920/1080');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-bottom: 2rem;
+        }
+
+        .hero-content {
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Packages Section */
+        .packages-container {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .package-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .package-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+
+        .package-header {
+            background-color: #2C5B2D;
+            color: white;
+            padding: 1.5rem;
+            position: relative;
+        }
+
+        .package-header h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .price {
+            font-size: 2rem;
+            color: #FFD700;
+            margin-bottom: 0.5rem;
+        }
+
+        .package-content {
+            padding: 2rem;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .features-list li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .features-list li::before {
+            content: "✓";
+            color: #2C5B2D;
+            position: absolute;
+            left: 0;
+        }
+
+        .seasonal-note {
+            background-color: #87CEEB;
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        .book-button {
+            display: inline-block;
+            background-color: #FFA500;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .book-button:hover {
+            background-color: #FFD700;
+            transform: translateY(-2px);
+        }
+
+        .group-size {
+            display: inline-block;
+            background-color: #E8E8E8;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            margin-top: 1rem;
+        }
+
+        /* Best Times Section */
+        .best-times {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 3rem;
+        }
+
+        .best-times h2 {
+            color: #2C5B2D;
+            margin-bottom: 1.5rem;
+        }
+
+        .season-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .season-card {
+            background-color: #F5F5F5;
+            padding: 1.5rem;
+            border-radius: 10px;
+        }
+
+        .season-card h3 {
+            color: #2C5B2D;
+            margin-bottom: 1rem;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav li {
+                margin: 0.5rem 0;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .package-header h2 {
+                font-size: 1.5rem;
+            }
+
+            .price {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="packages.html" class="active">Packages & Experiences</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Our Camping Packages</h1>
+            <p>Choose your perfect Rwanda camping experience</p>
+        </div>
+    </section>
+
+    <div class="packages-container">
+        <!-- Luxury Package -->
+        <div class="package-card">
+            <div class="package-header">
+                <h2>Luxury Camping Experience</h2>
+                <div class="price">$300 per night</div>
+                <div class="group-size">2-4 people</div>
+            </div>
+            <div class="package-content">
+                <ul class="features-list">
+                    <li>Luxury furnished tent with comfortable beds</li>
+                    <li>Private bathroom facilities</li>
+                    <li>Full-board gourmet meals</li>
+                    <li>Personal guide and porter</li>
+                    <li>Private game drives or treks</li>
+                    <li>Complimentary welcome drink</li>
+                    <li>Evening campfire experiences</li>
+                </ul>
+                <div class="seasonal-note">
+                    Best experienced during dry seasons: June-September & December-February
+                </div>
+                <a href="#" class="book-button">Book Now</a>
+            </div>
+        </div>
+
+        <!-- Adventure Package -->
+        <div class="package-card">
+            <div class="package-header">
+                <h2>Adventure Camping Package</h2>
+                <div class="price">$150 per night</div>
+                <div class="group-size">4-8 people</div>
+            </div>
+            <div class="package-content">
+                <ul class="features-list">
+                    <li>Standard furnished camping tent</li>
+                    <li>Shared bathroom facilities</li>
+                    <li>Three meals per day</li>
+                    <li>Group guide</li>
+                    <li>Group activities and hikes</li>
+                    <li>Basic camping equipment</li>
+                    <li>Shared campfire experience</li>
+                </ul>
+                <div class="seasonal-note">
+                    Available year-round, best weather March-May & October-November
+                </div>
+                <a href="#" class="book-button">Book Now</a>
+            </div>
+        </div>
+
+        <!-- Budget Package -->
+        <div class="package-card">
+            <div class="package-header">
+                <h2>Basic Camping Experience</h2>
+                <div class="price">$75 per night</div>
+                <div class="group-size">Up to 10 people</div>
+            </div>
+            <div class="package-content">
+                <ul class="features-list">
+                    <li>Basic tent accommodation</li>
+                    <li>Shared facilities</li>
+                    <li>Self-catering option available</li>
+                    <li>Access to communal areas</li>
+                    <li>Basic camping equipment rental</li>
+                    <li>Group activities available</li>
+                    <li>Community campfire nights</li>
+                </ul>
+                <div class="seasonal-note">
+                    Available year-round, discounted rates during off-peak seasons
+                </div>
+                <a href="#" class="book-button">Book Now</a>
+            </div>
+        </div>
+
+        <!-- Best Times to Visit Section -->
+        <div class="best-times">
+            <h2>Best Times to Visit</h2>
+            <div class="season-grid">
+                <div class="season-card">
+                    <h3>Peak Season (June-September)</h3>
+                    <ul>
+                        <li>Perfect weather conditions</li>
+                        <li>Best for gorilla trekking</li>
+                        <li>Clear skies for photography</li>
+                        <li>Higher rates apply</li>
+                    </ul>
+                </div>
+                <div class="season-card">
+                    <h3>Shoulder Season (Dec-Feb)</h3>
+                    <ul>
+                        <li>Good weather conditions</li>
+                        <li>Fewer tourists</li>
+                        <li>Better availability</li>
+                        <li>Moderate rates</li>
+                    </ul>
+                </div>
+                <div class="season-card">
+                    <h3>Green Season (Mar-May & Oct-Nov)</h3>
+                    <ul>
+                        <li>Occasional rain</li>
+                        <li>Lush landscapes</li>
+                        <li>Lower rates</li>
+                        <li>Less crowded</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

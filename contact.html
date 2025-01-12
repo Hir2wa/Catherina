@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Rwanda Camping Experience</title>
+    <style>
+        /* Include your existing base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F5F5F5;
+            color: #333333;
+            padding-top: 60px;
+        }
+
+        /* Navigation styles from your homepage */
+        nav {
+            background-color: #2C5B2D;
+            padding: 1rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 0 auto;
+            list-style: none;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #FFD700;
+            color: #333333;
+            transform: translateY(-2px);
+        }
+
+        nav a.active {
+            background-color: #FFD700;
+            color: #333333;
+        }
+
+        /* Contact Page Specific Styles */
+        .contact-header {
+            background-color: #2C5B2D;
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .contact-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .whatsapp-card {
+            background: #25D366;
+            color: white;
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .book-button {
+            display: inline-block;
+            background-color: white;
+            color: #25D366;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .book-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            color: #2C5B2D;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-link:hover {
+            color: #FFD700;
+        }
+
+        .hours-list {
+            list-style: none;
+            text-align: left;
+            margin-top: 1rem;
+        }
+
+        .hours-list li {
+            margin-bottom: 0.5rem;
+            padding: 0.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="packages.html">Packages & Experiences</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="contact-header">
+        <h1>Contact Us & Book Your Adventure</h1>
+        <p>Ready to experience Rwanda? We're here to help!</p>
+    </header>
+
+    <main class="contact-container">
+        <div class="contact-grid">
+            <!-- WhatsApp Booking Card -->
+            <div class="contact-card whatsapp-card">
+                <div class="contact-icon">📱</div>
+                <h2>Book via WhatsApp</h2>
+                <p>Quick responses and easy booking through WhatsApp</p>
+                <a href="https://wa.me/250XXXXXXXXX" class="book-button" target="_blank">
+                    Book Now on WhatsApp
+                </a>
+            </div>
+
+            <!-- Contact Information Card -->
+            <div class="contact-card">
+                <div class="contact-icon">📞</div>
+                <h2>Contact Information</h2>
+                <p>Phone: +250 XX XXX XXX</p>
+                <p>Email: info@rwandacamping.com</p>
+                <div class="social-links">
+                    <a href="https://facebook.com/rwandacamping" class="social-link" target="_blank">📘 Facebook</a>
+                    <a href="https://instagram.com/rwandacamping" class="social-link" target="_blank">📸 Instagram</a>
+                    <a href="https://twitter.com/rwandacamping" class="social-link" target="_blank">🐦 Twitter</a>
+                </div>
+            </div>
+
+            <!-- Business Hours Card -->
+            <div class="contact-card">
+                <div class="contact-icon">⏰</div>
+                <h2>Business Hours</h2>
+                <ul class="hours-list">
+                    <li>Monday - Friday: 8:00 AM - 6:00 PM</li>
+                    <li>Saturday: 9:00 AM - 4:00 PM</li>
+                    <li>Sunday: 10:00 AM - 2:00 PM</li>
+                    <li>Holidays: By Appointment</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

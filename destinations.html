@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations - Rwanda Camping Experience</title>
+    <style>
+        /* Include your existing styles from home page */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F5F5F5;
+            color: #333333;
+            padding-top: 60px;
+        }
+
+        /* Keep your existing nav styles */
+        nav {
+            background-color: #2C5B2D;
+            padding: 1rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 0 auto;
+            list-style: none;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #FFD700;
+            color: #333333;
+            transform: translateY(-2px);
+        }
+
+        nav a.active {
+            background-color: #FFD700;
+            color: #333333;
+        }
+
+        /* Destinations Page Specific Styles */
+        .destination-header {
+            background-color: #2C5B2D;
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .destination-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .destination-section {
+            margin-bottom: 4rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .destination-hero {
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .destination-info {
+            padding: 2rem;
+        }
+
+        .destination-info h2 {
+            color: #2C5B2D;
+            margin-bottom: 1rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .info-box {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 10px;
+        }
+
+        .info-box h3 {
+            color: #2C5B2D;
+            margin-bottom: 1rem;
+        }
+
+        .activity-list {
+            list-style: none;
+        }
+
+        .activity-list li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .activity-list li::before {
+            content: "•";
+            color: #FFA500;
+            position: absolute;
+            left: 0;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            padding: 2rem;
+            background: #f9f9f9;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .destination-hero {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="destinations.html" class="active">Destinations</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="packages.html">Packages & Experiences</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="destination-header">
+        <h1>Our Camping Destinations</h1>
+        <p>Discover Rwanda's most beautiful locations for your next adventure</p>
+    </header>
+
+    <main class="destination-container">
+        <!-- Volcanoes National Park Section -->
+        <section class="destination-section">
+            <div class="destination-hero" style="background-image: url('https://media.gettyimages.com/photos/landscape-of-the-virunga-mountains-in-rwanda-picture-id157482029');">
+            </div>
+            <div class="destination-info">
+                <h2>Volcanoes National Park</h2>
+                <p>Experience the majesty of Rwanda's mountain gorillas in their natural habitat, surrounded by the stunning Virunga Mountains.</p>
+                
+                <div class="info-grid">
+                    <div class="info-box">
+                        <h3>Location Details</h3>
+                        <p>Located in Kinigi, Musanze District, Northern Province. The park is a 2-hour drive from Kigali and borders both Congo and Uganda.</p>
+                    </div>
+                    
+                    <div class="info-box">
+                        <h3>What to Expect</h3>
+                        <p>High-altitude environment with temperatures ranging from 11°C to 21°C. Expect humid conditions and occasional rain. Professional guides accompany all activities.</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h3>Activities Available</h3>
+                        <ul class="activity-list">
+                            <li>Mountain gorilla tracking</li>
+                            <li>Golden monkey visits</li>
+                            <li>Dian Fossey's grave hike</li>
+                            <li>Mount Karisimbi climbing</li>
+                            <li>Cultural village visits</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery">
+                <img src="https://via.placeholder.com/400x300" alt="Gorilla Tracking">
+                <img src="https://via.placeholder.com/400x300" alt="Mount Karisimbi">
+                <img src="https://via.placeholder.com/400x300" alt="Golden Monkeys">
+                <img src="https://via.placeholder.com/400x300" alt="Camping Site">
+            </div>
+        </section>
+
+        <!-- Additional sections for other destinations would follow the same pattern -->
+        <!-- Nyungwe National Park Section -->
+        <section class="destination-section">
+            <div class="destination-hero" style="background-image: url('image/Nyugwe.png');">
+            </div>
+            <div class="destination-info">
+                <h2>Nyungwe National Park</h2>
+                <p>Explore one of Africa's oldest rainforests, home to diverse wildlife and the spectacular canopy walkway.</p>
+                
+                <div class="info-grid">
+                    <div class="info-box">
+                        <h3>Location Details</h3>
+                        <p>Situated in southwestern Rwanda, Nyungwe is about a 5-hour drive from Kigali. The park covers over 1000 square kilometers of rainforest.</p>
+                    </div>
+                    
+                    <div class="info-box">
+                        <h3>What to Expect</h3>
+                        <p>Tropical rainforest climate with moderate temperatures. Best visited during dry seasons (June-September or December-February).</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h3>Activities Available</h3>
+                        <ul class="activity-list">
+                            <li>Canopy walkway experience</li>
+                            <li>Chimpanzee tracking</li>
+                            <li>Waterfall hikes</li>
+                            <li>Bird watching tours</li>
+                            <li>Forest camping</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery">
+                <img src="https://via.placeholder.com/400x300" alt="Canopy Walkway">
+                <img src="https://via.placeholder.com/400x300" alt="Chimpanzees">
+                <img src="https://via.placeholder.com/400x300" alt="Waterfall">
+                <img src="https://via.placeholder.com/400x300" alt="Forest Trails">
+            </div>
+        </section>
+    </main>
+
+    <div class="contact-float" onclick="window.open('tel:+250...', '_blank');" title="Contact Us">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10z"></path>
+        </svg>
+    </div>
+</body>
+</html>
